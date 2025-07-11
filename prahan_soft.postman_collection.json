@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "54886309-84e4-4867-b74b-2de3ab46f7f1",
+		"name": "prahan_soft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39905731"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"adminn@example.com\",\n  \"password\": \"admin123\",\n  \"role\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"userr@example.com\",\n  \"password\": \"user123\",\n  \"role\": \"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies/bulk-upload",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmZkNDg1OWE5Nzk4MzkwOTk3ZTA5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjIwMTg2MCwiZXhwIjoxNzUyMjA1NDYwfQ.Mb3UrNR1Qqz8BA3dpoit-RNRjj_exe-zqK7CsohAIA0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Rajesh1/Downloads/sample_100_movies (1).xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/bulk-upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"bulk-upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzA3NzRhMTZkODZmNTYwN2ZiNjMyMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjIwMTAzNCwiZXhwIjoxNzUyMjA0NjM0fQ.alYAwEPNqKLVUBd1jUNVTgw-4PCtpB4xITrhooeBXMU"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Inception\",\n  \"rating\": 8.8,\n  \"genres\": [\"Sci-Fi\", \"Thriller\"],\n  \"watchedUsers\": [\"user@example.com\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies?page=1&limit=10",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmZkNDg1OWE5Nzk4MzkwOTk3ZTA5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjIwMTg2MCwiZXhwIjoxNzUyMjA1NDYwfQ.Mb3UrNR1Qqz8BA3dpoit-RNRjj_exe-zqK7CsohAIA0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/movies?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies?genre=Comedy&rating=7.5",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmZkNDg1OWE5Nzk4MzkwOTk3ZTA5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjIwMTg2MCwiZXhwIjoxNzUyMjA1NDYwfQ.Mb3UrNR1Qqz8BA3dpoit-RNRjj_exe-zqK7CsohAIA0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/movies?genre=Comedy&rating=7.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Comedy"
+						},
+						{
+							"key": "rating",
+							"value": "7.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies?rating=8.5",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmZkNDg1OWE5Nzk4MzkwOTk3ZTA5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjIwMTg2MCwiZXhwIjoxNzUyMjA1NDYwfQ.Mb3UrNR1Qqz8BA3dpoit-RNRjj_exe-zqK7CsohAIA0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/movies?rating=8.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "rating",
+							"value": "8.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/me",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmZkNDg1OWE5Nzk4MzkwOTk3ZTA5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MjIwMTg2MCwiZXhwIjoxNzUyMjA1NDYwfQ.Mb3UrNR1Qqz8BA3dpoit-RNRjj_exe-zqK7CsohAIA0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/auth/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
